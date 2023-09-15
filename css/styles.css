@@ -259,8 +259,8 @@ section {
     background-color: #F4F4FD;
 }
 
-.team-icon-link {
-
+.team-info-cards .team-list .team-icon {
+    display: flex;
     background-color: #4D5AE5;
 }
 
