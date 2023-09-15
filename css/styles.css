@@ -259,8 +259,16 @@ section {
     background-color: #F4F4FD;
 }
 
-.team-info-cards .team-list .team-icon {
+.team-icon {
     display: flex;
+
+}
+
+.team-icon-link {
+    display: flex;
+    border: 50%;
+    width: 40px;
+    height: 40px;
     background-color: #4D5AE5;
 }
 
