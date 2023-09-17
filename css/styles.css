@@ -116,6 +116,7 @@ button {
 }
 
 .nav-link-item-current::after {
+    content: "";
     display: block;
     width: 100%;
     position: absolute;
@@ -429,9 +430,13 @@ button {
 .portfolio-list-item {
 
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
+.portfolio-list-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 
 .portfolio-list li {
 
@@ -529,6 +534,8 @@ button {
     padding-top: 8px;
     height: 100%;
     width: 100%;
+    gap: 16px;
+
 }
 
 .footer-icon-link {
@@ -540,6 +547,7 @@ button {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -558,8 +566,18 @@ button {
     fill: #f4f4fd;
 }
 
-.footer-container.container {
+.footer-container {
     display: flex;
     align-items: baseline;
+    margin-right: 120px
+}
+
+.social-media-footer {
+    padding-left: 120px;
+}
+
+.footer-icon-link:hover,
+.footer-icon-link:focus {
+    background-color: #31d0aa;
 
 }
