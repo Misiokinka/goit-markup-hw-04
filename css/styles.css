@@ -75,6 +75,7 @@ button {
     justify-content: space-between;
     max-width: 1158px;
     padding: 0 15px 0 15px;
+    height: 74px;
 }
 
 
@@ -97,8 +98,6 @@ button {
     color: #2e2f42;
 }
 
-
-
 .nav-list a:hover {
     color: #404BBF;
 }
@@ -110,12 +109,22 @@ button {
 .nav-link-list {
 
     color: #2e2f42;
-
 }
 
-.nav-link-studio:hover {
-    color: #404bbf
+.nav-list-item::after {
+
+    height: 4px;
+    display: block;
+    background-color: #404bbf;
+content: "";
 }
+
+/* .nav-list li:hover {
+    border-bottom: 4px solid #404BBF;
+
+} */
+
+
 
 .nav-list {
     display: flex;
@@ -172,8 +181,14 @@ button {
 
 /* Solutions for Your Business */
 .section-business {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1.jpg);
+    max-width: 1440PX;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding: 188px 0;
     background-color: #2E2F42;
+    margin: 0 auto;
 }
 
 .container-business {
@@ -224,12 +239,17 @@ button {
 }
 
 /* About project list */
+.section-project {
+    padding: 120px 0 120px;
+}
+
 .project-list {
     display: flex;
     gap: 24px;
 }
 
 .project-item {
+    position: relative;
     flex-basis: calc((100% - 72px) / 4);
 }
 
@@ -249,27 +269,70 @@ button {
     letter-spacing: 0.02em;
 }
 
+.project-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 264px;
+    height: 112px;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    background-color: #F4F4FD;
+    margin-bottom: 8px;
+
+}
+
+.project-icon-item {
+    width: 64px;
+    height: 64px;
+}
+
 /* Team section  */
+.section-team {
+    background-color: #F4F4FD;
+}
+
 .team-text {
 
     padding: 32px 0
 }
 
-section {
-    background-color: #F4F4FD;
+
+.team-icon-link:hover,
+.team-icon-link:focus {
+    background-color: #404BBF;
+    color: #FFFFFF;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.icon-item {
+
+    fill: #e7e9fc;
 }
 
 .team-icon {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding-top: 8px;
+    height: 100%;
+    width: 100%;
+
 
 }
 
 .team-icon-link {
     display: flex;
-    border: 50%;
+    flex-direction: column;
     width: 40px;
     height: 40px;
     background-color: #4D5AE5;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .team-info-cards li {
@@ -281,8 +344,10 @@ section {
     gap: 24px;
     flex-wrap: wrap;
     text-align: center;
-    padding-top: 32px;
+    padding-top: 72px;
+    padding-bottom: 120px;
     border-radius: 0px 0px 4px 4px;
+
 }
 
 .team-list {
@@ -298,7 +363,7 @@ section {
     text-align: center;
     text-transform: capitalize;
     color: #2e2f42;
-    margin-bottom: 72px;
+    padding-top: 120px;
 }
 
 .team-name {
@@ -356,6 +421,8 @@ section {
     width: calc((100% - 48px) / 3);
 }
 
+
+
 .portfolio-list li {
 
     background-color: #FFF;
@@ -377,6 +444,33 @@ section {
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+
+.portfolio-image {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.portfolio-list-item:hover .portfolio-overlay {
+    transform: translateY(0);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    background-color: #4D5AE5;
+    color: #F4F4FD;
+    inset: 0;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(100%);
+    padding-right: 32px;
+    padding-left: 32px;
+    padding-top: 40px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+}
+
 
 /* Footer */
 
@@ -411,4 +505,48 @@ section {
     line-height: 1.5;
     letter-spacing: 0.02em;
     max-width: 264px;
+    font-weight: 500;
+}
+
+.footer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding-top: 8px;
+    height: 100%;
+    width: 100%;
+}
+
+.footer-icon-link {
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    height: 40px;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.social-text {
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+
+
+.icon-footer {
+    fill: #e7e9fc;
+}
+
+.footer-container.container {
+    display: flex;
+    align-items: baseline;
+
 }
